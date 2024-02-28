@@ -15,8 +15,7 @@ const StyledArrow = styled(IoIosArrowDropdown)`
 `
 
 export default function Arrow() {
-  const games = useContext(GamesContext)
-  const gamesDispatch = useContext(GamesDispatchContext)
+  const { games, gamesDispatch } = useContext(GamesContext)
   return (
     !!games.order && <StyledArrow onClick={() => gamesDispatch({ type: REVERSE_GAMES, reversed: !games.reversed })}
       $reversed={games.reversed} size={24} />

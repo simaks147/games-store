@@ -9,6 +9,7 @@ const nextConfig = {
   images: {
     domains: ['media.rawg.io']
   },
+  reactStrictMode: false
 };
 
 export default nextConfig;

@@ -43,9 +43,8 @@ const StyledSelector = styled.select`
 `
 
 export default function SelectPanel() {
-  const gamesDispatch = useContext(GamesDispatchContext)
-  const platforms = useContext(PlatformsContext)
-  const platformsDispatch = useContext(PlatformsDispatchContext)
+  const { gamesDispatch } = useContext(GamesContext)
+  const { platforms, platformsDispatch } = useContext(PlatformsContext)
 
   useEffect(() => {
     fetchPlatforms(`/api/platforms`, platformsDispatch, platforms)
